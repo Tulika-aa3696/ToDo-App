@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const {createToDo} = require('../controllers/createToDo');
+const {getToDo, getToDoById } = require('../controllers/getToDo');
+const {deleteToDo} = require('../controllers/deleteToDo');
+router.post('/createToDo', createToDo);
+router.get('/getToDo', getToDo);
+router.get('/getToDo/:id', getToDoById);
+router.delete('/deleteToDo/:id', deleteToDo);
+module.exports = router;
